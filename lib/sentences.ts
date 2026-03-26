@@ -1,4 +1,4 @@
-export type TenseType = "preterito" | "imperfecto";
+export type TenseType = "preterito" | "imperfecto" | "presente_perfecto" | "pluscuamperfecto";
 
 export interface Sentence {
   id: number;
@@ -738,6 +738,218 @@ export const trainingSentences: Sentence[] = [
     explanation:
       "Habitual action. Use imperfecto.",
     rule: "'Always' with past actions usually means Imperfecto",
+  },
+
+  // ── PRESENTE PERFECTO (Present Perfect: have/has + past participle) ──────
+  // COMER - to eat
+  {
+    id: 51,
+    english: "I have already eaten dinner.",
+    verb: "comer",
+    verbInfinitive: "comer",
+    correctAnswer: "he comido",
+    incorrectAnswer: "comi",
+    correctTense: "presente_perfecto",
+    explanation:
+      "An action completed recently with present relevance. Use presente perfecto (he/has/ha + participle).",
+    rule: "Recent/relevant completed actions use Presente Perfecto",
+  },
+  // ESTAR - to be
+  {
+    id: 52,
+    english: "She has never been to Spain.",
+    verb: "estar",
+    verbInfinitive: "estar",
+    correctAnswer: "ha estado",
+    incorrectAnswer: "estuvo",
+    correctTense: "presente_perfecto",
+    explanation:
+      "A life experience (has/have ever done). Use presente perfecto.",
+    rule: "Life experiences use Presente Perfecto",
+  },
+  // VER - to see
+  {
+    id: 53,
+    english: "Have you ever seen this movie?",
+    verb: "ver",
+    verbInfinitive: "ver",
+    correctAnswer: "has visto",
+    incorrectAnswer: "viste",
+    correctTense: "presente_perfecto",
+    explanation:
+      "A life experience question (have you ever…). Use presente perfecto.",
+    rule: "'Have you ever' questions use Presente Perfecto",
+  },
+  // LLEGAR - to arrive
+  {
+    id: 54,
+    english: "We have just arrived.",
+    verb: "llegar",
+    verbInfinitive: "llegar",
+    correctAnswer: "hemos llegado",
+    incorrectAnswer: "llegamos",
+    correctTense: "presente_perfecto",
+    explanation:
+      "A very recent action ('just arrived'). Use presente perfecto.",
+    rule: "'Just' + recent action uses Presente Perfecto",
+  },
+  // ESCRIBIR - to write
+  {
+    id: 55,
+    english: "He has written many books.",
+    verb: "escribir",
+    verbInfinitive: "escribir",
+    correctAnswer: "ha escrito",
+    incorrectAnswer: "escribio",
+    correctTense: "presente_perfecto",
+    explanation:
+      "An ongoing achievement still relevant today. Use presente perfecto.",
+    rule: "Ongoing achievements use Presente Perfecto",
+  },
+  // HACER - to do/make
+  {
+    id: 56,
+    english: "I have already done my homework.",
+    verb: "hacer",
+    verbInfinitive: "hacer",
+    correctAnswer: "he hecho",
+    incorrectAnswer: "hice",
+    correctTense: "presente_perfecto",
+    explanation:
+      "Completed action with 'already', still relevant. Use presente perfecto.",
+    rule: "'Already' with a completed action uses Presente Perfecto",
+  },
+  // HABLAR - to speak
+  {
+    id: 57,
+    english: "She has spoken with the manager.",
+    verb: "hablar",
+    verbInfinitive: "hablar",
+    correctAnswer: "ha hablado",
+    incorrectAnswer: "hablo",
+    correctTense: "presente_perfecto",
+    explanation:
+      "A completed action relevant to the current situation. Use presente perfecto.",
+    rule: "Actions relevant to now use Presente Perfecto",
+  },
+  // VIVIR - to live
+  {
+    id: 58,
+    english: "They have lived here for years.",
+    verb: "vivir",
+    verbInfinitive: "vivir",
+    correctAnswer: "han vivido",
+    incorrectAnswer: "vivieron",
+    correctTense: "presente_perfecto",
+    explanation:
+      "An action that started in the past and continues to the present. Use presente perfecto.",
+    rule: "Actions continuing into the present use Presente Perfecto",
+  },
+
+  // ── PLUSCUAMPERFECTO (Past Perfect: had + past participle) ───────────────
+  // COMER - to eat
+  {
+    id: 59,
+    english: "I had already eaten when she arrived.",
+    verb: "comer",
+    verbInfinitive: "comer",
+    correctAnswer: "había comido",
+    incorrectAnswer: "comi",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "An action completed before another past event. Use pluscuamperfecto (había/habías/había + participle).",
+    rule: "Actions completed before another past event use Pluscuamperfecto",
+  },
+  // VER - to see
+  {
+    id: 60,
+    english: "He had never seen snow before that day.",
+    verb: "ver",
+    verbInfinitive: "ver",
+    correctAnswer: "había visto",
+    incorrectAnswer: "vio",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "A life experience prior to a specific past moment. Use pluscuamperfecto.",
+    rule: "'Had never' before a past moment uses Pluscuamperfecto",
+  },
+  // SALIR - to leave
+  {
+    id: 61,
+    english: "They had already left when I arrived.",
+    verb: "salir",
+    verbInfinitive: "salir",
+    correctAnswer: "habían salido",
+    incorrectAnswer: "salieron",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "The leaving happened before the arriving. Use pluscuamperfecto.",
+    rule: "Actions that occurred before another past action use Pluscuamperfecto",
+  },
+  // TRABAJAR - to work
+  {
+    id: 62,
+    english: "She had worked there before the company moved.",
+    verb: "trabajar",
+    verbInfinitive: "trabajar",
+    correctAnswer: "había trabajado",
+    incorrectAnswer: "trabajo",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "Working happened before the company moved (another past event). Use pluscuamperfecto.",
+    rule: "Earlier past actions use Pluscuamperfecto",
+  },
+  // HABLAR - to speak
+  {
+    id: 63,
+    english: "We had spoken before the meeting started.",
+    verb: "hablar",
+    verbInfinitive: "hablar",
+    correctAnswer: "habíamos hablado",
+    incorrectAnswer: "hablamos",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "Speaking occurred before the meeting (a past event). Use pluscuamperfecto.",
+    rule: "Actions preceding a past event use Pluscuamperfecto",
+  },
+  // ESCRIBIR - to write
+  {
+    id: 64,
+    english: "He had written the letter before I called.",
+    verb: "escribir",
+    verbInfinitive: "escribir",
+    correctAnswer: "había escrito",
+    incorrectAnswer: "escribio",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "Writing finished before another past event (the phone call). Use pluscuamperfecto.",
+    rule: "Actions completed before another past event use Pluscuamperfecto",
+  },
+  // HACER - to do/make
+  {
+    id: 65,
+    english: "I had done it before you asked me.",
+    verb: "hacer",
+    verbInfinitive: "hacer",
+    correctAnswer: "había hecho",
+    incorrectAnswer: "hice",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "Doing it happened before you asked (another past event). Use pluscuamperfecto.",
+    rule: "Prior completed actions use Pluscuamperfecto",
+  },
+  // VIVIR - to live
+  {
+    id: 66,
+    english: "She had lived in Paris before moving to Madrid.",
+    verb: "vivir",
+    verbInfinitive: "vivir",
+    correctAnswer: "había vivido",
+    incorrectAnswer: "vivio",
+    correctTense: "pluscuamperfecto",
+    explanation:
+      "Living in Paris occurred before moving to Madrid (a later past event). Use pluscuamperfecto.",
+    rule: "Earlier past states use Pluscuamperfecto",
   },
 ];
 
